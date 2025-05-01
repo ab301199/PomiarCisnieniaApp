@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Pomiarcisnieniaapp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Ukryj ActionBar (na wszelki wypadek) -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Tutaj możesz dopisać inne kolory, jeśli chcesz -->
+    </style>
+
+    <style name="Theme.Pomiarcisnieniaapp" parent="Base.Theme.Pomiarcisnieniaapp" />
+</resources>

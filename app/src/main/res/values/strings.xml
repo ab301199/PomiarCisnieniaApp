@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">pomiarcisnieniaapp</string>
+    <string name="zaloguj">Zaloguj</string>
+    <string name="e_mail">e-mail</string>
+    <string name="has_o">Hasło</string>
+    <string name="zarejestruj">Zarejestruj</string>
+    <string name="zaloguj_si">Zaloguj się</string>
+    <string name="zarejestruj_si">Zarejestruj się</string>
+    <string name="wyloguj_si">Wyloguj się</string>
+    <string name="skurczowe">Skurczowe</string>
+    <string name="rozkurczowe">Rozkurczowe</string>
+    <string name="dodaj_pomiar">Dodaj pomiar</string>
+    <string name="dzienniczek_lek_w">Dzienniczek leków</string>
+    <string name="t_tno">Tętno</string>
+    <string name="ci_nienie">Ciśnienie</string>
+    <string name="ustawienia">Ustawienia</string>
+</resources>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1002989033151",
+    "firebase_url": "https://pazig-5ae7a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pazig-5ae7a",
+    "storage_bucket": "pazig-5ae7a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002989033151:android:9f56648b628d18175a580a",
+        "android_client_info": {
+          "package_name": "com.example.pomiarcisnieniaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPNTHZzomzATffEtUfE3n0tiJIR8VlJHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

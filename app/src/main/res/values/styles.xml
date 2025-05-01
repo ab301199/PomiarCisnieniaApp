@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomBottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- Wyłącz kolorowanie ikon -->
+        <item name="itemIconTint">@null</item>
+
+        <!-- Wyłącz kolorowanie tekstu -->
+        <item name="itemTextColor">@null</item>
+
+        <!-- Wyłącz efekt "ripple" -->
+        <item name="itemRippleColor">@null</item>
+
+        <!-- Możesz też ustawić inne niestandardowe właściwości -->
+    </style>
+</resources>
