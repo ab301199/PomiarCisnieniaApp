@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout bottomNav;
     private ImageView navHome, navHeart, navPills, navSettings;
     private TextView selectedDateTextView;
-    private String selectedDate = ""; // Zmienna do przechowywania wybranej daty
+    private String selectedDate = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        // Obsługa kliknięcia na TextView do wyboru daty
+
         selectedDateTextView.setOnClickListener(view -> showDatePicker());
 
-        // Obsługa przycisku dodania pomiaru
+
         dodajPomiarButton.setOnClickListener(view -> {
             String skurczoweStr = skurczoweInput.getText().toString();
             String rozkurczoweStr = rozkurczoweInput.getText().toString();
@@ -139,10 +139,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Funkcja do konwertowania daty na timestamp
+
     private long getTimestampFromDate(String date) {
         String[] dateParts = date.split("/");
-        int month = Integer.parseInt(dateParts[0]) - 1; // Miesiące w Calendar zaczynają się od 0
+        int month = Integer.parseInt(dateParts[0]) - 1;
         int day = Integer.parseInt(dateParts[1]);
         int year = Integer.parseInt(dateParts[2]);
 
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         return calendar.getTimeInMillis();
     }
 
-    // Funkcja do formatowania daty na format yyyy/MM/dd do zapisu w bazie danych
+
     private String formatDateForDatabase(String date) {
         String[] dateParts = date.split("/");
         return dateParts[2] + "/" + dateParts[0] + "/" + dateParts[1]; // yyyy/MM/dd
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 year, month, day
         );
 
-        // Blokuje możliwość wyboru daty w przyszłości
+
         datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
         datePickerDialog.show();
     }
