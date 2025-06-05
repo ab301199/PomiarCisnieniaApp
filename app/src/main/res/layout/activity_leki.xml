@@ -9,6 +9,7 @@
     android:background="#FFFFFF"
     tools:context=".Leki">
 
+    <!-- Tytuł musi być pierwszy -->
     <TextView
         android:id="@+id/leki_title"
         android:layout_width="wrap_content"
@@ -18,7 +19,49 @@
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/editTextLek"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nazwa leku"
+        android:layout_below="@id/leki_title"
+        android:layout_marginTop="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center_vertical"
+        android:background="@android:drawable/editbox_background" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLek"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:timePickerMode="spinner"
+        android:layout_marginBottom="10dp"/>
+
+
+
+    <Button
+        android:id="@+id/buttonDodaj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dodaj lek"
+        android:layout_below="@id/timePicker"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="#FFFFFF" />
+
+    <ListView
+        android:id="@+id/listViewLeki"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/buttonDodaj"
+        android:layout_above="@id/custom_bottom_nav"
+        android:layout_marginTop="10dp" />
 
     <LinearLayout
         android:id="@+id/custom_bottom_nav"
@@ -27,18 +70,16 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:weightSum="4"> <!-- Ustawiamy sumę wag na 4 (liczba ikon) -->
+        android:weightSum="4">
 
-        <!-- Ikona Strona Główna -->
         <ImageView
             android:id="@+id/nav_home"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:src="@drawable/ic_home"
-            android:layout_gravity="center" /> <!-- Centrujemy obrazek w każdej przestrzeni -->
+            android:layout_gravity="center" />
 
-        <!-- Ikona Tętno -->
         <ImageView
             android:id="@+id/nav_heart"
             android:layout_width="0dp"
@@ -47,7 +88,6 @@
             android:src="@drawable/ic_heart"
             android:layout_gravity="center" />
 
-        <!-- Ikona Leki -->
         <ImageView
             android:id="@+id/nav_pills"
             android:layout_width="0dp"
@@ -56,7 +96,6 @@
             android:src="@drawable/ic_pills"
             android:layout_gravity="center" />
 
-        <!-- Ikona Ustawienia -->
         <ImageView
             android:id="@+id/nav_settings"
             android:layout_width="0dp"

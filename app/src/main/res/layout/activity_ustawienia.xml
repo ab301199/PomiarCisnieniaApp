@@ -5,10 +5,10 @@
     android:id="@+id/ustawienia"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="#FFFFFF"
     tools:context=".Ustawienia">
 
+    <!-- Tytuł -->
     <TextView
         android:id="@+id/ustawienia_title"
         android:layout_width="wrap_content"
@@ -17,20 +17,79 @@
         android:textSize="35sp"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true" />
 
+    <!-- ScrollView na wykresy i przycisk PDF -->
+    <ScrollView
+        android:id="@+id/chart_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/wylogujbtn"
+        android:layout_below="@id/ustawienia_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/chart_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wykres tętna i ciśnienia – tydzień"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart_week"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wykres tętna i ciśnienia – miesiąc"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart_month"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/button_generate_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generuj raport PDF"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Przycisk wyloguj -->
     <Button
-        android:text="@string/wyloguj_si"
-        android:gravity="center"
         android:id="@+id/wylogujbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:text="@string/wyloguj_si"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#4AB6FC"
-        android:layout_marginBottom="70dp" />
+        android:gravity="center" />
 
+    <!-- Dolna nawigacja -->
     <LinearLayout
         android:id="@+id/custom_bottom_nav"
         android:layout_width="match_parent"
@@ -38,18 +97,16 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:weightSum="4"> <!-- Ustawiamy sumę wag na 4 (liczba ikon) -->
+        android:weightSum="4">
 
-        <!-- Ikona Strona Główna -->
         <ImageView
             android:id="@+id/nav_home"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:src="@drawable/ic_home"
-            android:layout_gravity="center" /> <!-- Centrujemy obrazek w każdej przestrzeni -->
+            android:layout_gravity="center" />
 
-        <!-- Ikona Tętno -->
         <ImageView
             android:id="@+id/nav_heart"
             android:layout_width="0dp"
@@ -58,7 +115,6 @@
             android:src="@drawable/ic_heart"
             android:layout_gravity="center" />
 
-        <!-- Ikona Leki -->
         <ImageView
             android:id="@+id/nav_pills"
             android:layout_width="0dp"
@@ -67,7 +123,6 @@
             android:src="@drawable/ic_pills"
             android:layout_gravity="center" />
 
-        <!-- Ikona Ustawienia -->
         <ImageView
             android:id="@+id/nav_settings"
             android:layout_width="0dp"
@@ -76,5 +131,4 @@
             android:src="@drawable/ic_settings"
             android:layout_gravity="center" />
     </LinearLayout>
-
 </RelativeLayout>

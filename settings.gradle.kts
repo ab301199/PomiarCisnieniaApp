@@ -7,8 +7,9 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
-        mavenCentral()
         gradlePluginPortal()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }     // Dodane
     }
 }
 dependencyResolutionManagement {
@@ -16,9 +17,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }     // Dodane
     }
 }
 
 rootProject.name = "pomiarcisnieniaapp"
 include(":app")
- 
