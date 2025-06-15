@@ -90,7 +90,7 @@ public class Tetno extends AppCompatActivity {
 
                         PomiarTetno nowyPomiarTetno = new PomiarTetno(tetno, selectedDateTimestamp);
 
-                        // Zapisujemy pomiar do bazy danych Firebase na głównym wątku
+
                         database.child(user.getUid()).child("pomiar").child(formatDateForDatabase(selectedDateTetno)).setValue(nowyPomiarTetno)
                                 .addOnCompleteListener(task -> {
                                     if (task.isSuccessful()) {
