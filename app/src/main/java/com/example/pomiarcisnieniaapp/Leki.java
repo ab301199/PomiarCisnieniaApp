@@ -38,7 +38,7 @@ public class Leki extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leki);
 
-        // Poprawka: nie deklarujemy lokalnej zmiennej timePicker, tylko używamy pola klasy
+
         timePicker = findViewById(R.id.timePicker);
         if (Build.VERSION.SDK_INT >= 23) {
             timePicker.setHour(12);
@@ -48,7 +48,7 @@ public class Leki extends AppCompatActivity {
             timePicker.setCurrentMinute(0);
         }
 
-        // Inicjalizacja bottom nav
+
         bottomNav = findViewById(R.id.custom_bottom_nav);
         navHome = findViewById(R.id.nav_home);
         navHeart = findViewById(R.id.nav_heart);
@@ -80,17 +80,17 @@ public class Leki extends AppCompatActivity {
             finish();
         });
 
-        // Inicjalizacja widoków
+
         editTextLek = findViewById(R.id.editTextLek);
         buttonDodaj = findViewById(R.id.buttonDodaj);
         listViewLeki = findViewById(R.id.listViewLeki);
 
-        // Lista i adapter
+
         listaLekow = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaLekow);
         listViewLeki.setAdapter(adapter);
 
-        // Obsługa przycisku dodawania leku
+
         buttonDodaj.setOnClickListener(view -> {
             String nazwaLeku = editTextLek.getText().toString().trim();
             int godzina = timePicker.getHour();
@@ -126,13 +126,13 @@ public class Leki extends AppCompatActivity {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         if (alarmManager == null) {
-            return; // alarm manager niedostępny - wyjdź z funkcji
+            return;
         }
 
-        // Sprawdzenie uprawnienia na Android 12+ (API 31+)
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             if (!alarmManager.canScheduleExactAlarms()) {
-                // Przekieruj użytkownika do ustawień, żeby nadał pozwolenie
+
                 Intent settingsIntent = new Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
                 settingsIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(settingsIntent);
@@ -148,7 +148,7 @@ public class Leki extends AppCompatActivity {
             }
         } catch (SecurityException e) {
             e.printStackTrace();
-            // Możesz tu dodać Toast lub log
+
         }
     }
 }

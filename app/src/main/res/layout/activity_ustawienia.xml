@@ -21,61 +21,7 @@
         android:layout_alignParentTop="true" />
 
     <!-- ScrollView na wykresy i przycisk PDF -->
-    <ScrollView
-        android:id="@+id/chart_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/wylogujbtn"
-        android:layout_below="@id/ustawienia_title"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="16dp">
 
-        <LinearLayout
-            android:id="@+id/chart_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wykres tętna i ciśnienia – tydzień"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/chart_week"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginBottom="24dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wykres tętna i ciśnienia – miesiąc"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/chart_month"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginBottom="24dp" />
-
-            <Button
-                android:id="@+id/button_generate_pdf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Generuj raport PDF"
-                android:backgroundTint="#4CAF50"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="32dp" />
-        </LinearLayout>
-    </ScrollView>
 
     <!-- Przycisk wyloguj -->
     <Button

@@ -11,6 +11,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         String lek = intent.getStringExtra("lek");
         Toast.makeText(context, "Czas na lek: " + lek, Toast.LENGTH_LONG).show();
 
-        // (Opcjonalnie) Możesz tu wywołać notyfikację zamiast Toasta.
+
     }
 }
